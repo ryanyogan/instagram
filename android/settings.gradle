@@ -1,0 +1,3 @@
+rootProject.name = 'instagramclient'
+
+include ':app'
