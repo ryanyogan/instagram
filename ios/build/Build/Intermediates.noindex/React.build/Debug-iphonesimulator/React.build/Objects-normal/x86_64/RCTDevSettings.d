@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Modules/RCTDevSettings.mm \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Modules/RCTDevSettings.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/ryanyogan/personal/instagram-client/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/ryanyogan/personal/instagram-client/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Modules/RCTJSCSamplingProfiler.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/DevSupport/RCTPackagerClient.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/DevSupport/RCTPackagerConnection.h \
+  /Users/ryanyogan/personal/instagram-client/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.h
