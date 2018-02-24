@@ -1,3 +1,3 @@
-import { AppRegistry } from 'react-native';
-import App from './App';
-AppRegistry.registerComponent('instagramclient', () => App);
+import Nav from './src/Nav';
+
+export const App = new Nav();
