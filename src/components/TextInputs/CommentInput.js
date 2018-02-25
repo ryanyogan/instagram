@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   input: {
     borderWidth: 1,
     borderColor: iOSColors.lightGray2,
-    alignItems: 'center',
+    alignItems: 'flex-start',
     paddingVertical: 5,
     paddingHorizontal: 10,
     width: '95%',

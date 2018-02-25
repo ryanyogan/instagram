@@ -14,13 +14,11 @@ export default class Nav {
     Navigation.startTabBasedApp({
       tabs: [
         {
-          label: `Feeds`,
           screen: 'instagram.FeedsScreen',
           title: 'Doggy Duty',
           icon: iconsMap.home,
         },
         {
-          label: `Search`,
           screen: 'instagram.SearchScreen',
           title: 'Search',
           icon: iconsMap['ios-search'],
