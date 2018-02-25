@@ -16,16 +16,16 @@ export default class Nav {
         {
           label: `Feeds`,
           screen: 'instagram.FeedsScreen',
-          title: 'Instagram',
-          icon: iconsMap.home
+          title: 'Doggy Duty',
+          icon: iconsMap.home,
         },
         {
           label: `Search`,
           screen: 'instagram.SearchScreen',
           title: 'Search',
-          icon: iconsMap['ios-search']
-        }
-      ]
+          icon: iconsMap['ios-search'],
+        },
+      ],
     });
   }
 }

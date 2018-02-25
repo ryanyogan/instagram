@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView, Text } from 'react-native';
+import { PhotoCard } from '../../components';
 
 const FeedsScreen = () => (
-  <View>
-    <Text>FeedsScreen</Text>
-  </View>
+  <ScrollView>
+    <PhotoCard />
+  </ScrollView>
 );
 
 export default FeedsScreen;
