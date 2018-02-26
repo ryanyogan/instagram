@@ -19,10 +19,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Meta = ({
-  caption = 'this is our Narhwal Bella!',
-  username = 'mryogibeara',
-}) => (
+const Meta = ({ caption, username = 'mryogibeara' }) => (
   <View style={styles.root}>
     <View style={styles.wrapper}>
       <Text style={styles.text}>
@@ -31,7 +28,7 @@ const Meta = ({
       </Text>
     </View>
     <View style={styles.wrapper}>
-      <Text style={styles.text}>
+      <Text numberOfLines={2} style={styles.text}>
         <Text style={styles.regularText}>{username}</Text> {caption}
       </Text>
     </View>
