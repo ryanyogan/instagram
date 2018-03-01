@@ -1,3 +1,3 @@
-import Nav from './src/Nav';
+import { init } from './src/Nav';
 
-export const App = new Nav();
+init();

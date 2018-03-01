@@ -3,5 +3,8 @@
   "env": {
     "browser": true
   },
-  "extends": ["equimper", "prettier"]
+  "extends": ["equimper", "prettier"],
+  "globals": {
+    "__DEV__": false
+  }
 }
