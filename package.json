@@ -21,6 +21,9 @@
   "jest": {
     "preset": "react-native"
   },
+  "rnpm": {
+    "assets": ["./assets/fonts"]
+  },
   "dependencies": {
     "@appandflow/touchable": "^1.2.2",
     "apollo-cache-inmemory": "^1.1.9",

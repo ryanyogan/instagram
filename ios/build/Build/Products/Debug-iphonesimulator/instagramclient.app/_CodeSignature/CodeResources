@@ -71,11 +71,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3+uMAO35y/Eeg4Uk08ySRRgyu8Y=
+		iq4VPL3Ozq33hWgovp/5FOan0k8=
 		</data>
 		<key>Ionicons.ttf</key>
 		<data>
 		D3lWcE/mG0nEHqGiIFEkD3AKK0Q=
+		</data>
+		<key>Lobster-Regular.ttf</key>
+		<data>
+		9y8Iar19JWWEULiWYQ+5sQUEPvA=
 		</data>
 		<key>MaterialCommunityIcons.ttf</key>
 		<data>
@@ -111,7 +115,7 @@
 		</data>
 		<key>PlugIns/instagramclientTests.xctest/instagramclientTests</key>
 		<data>
-		crlKbplzNp+Y3h8fH56TInURUK0=
+		tFGdVWG+7mTfwc+x2hEUBDuDfvI=
 		</data>
 		<key>SimpleLineIcons.ttf</key>
 		<data>
@@ -302,6 +306,17 @@
 			u0dnmwuuuEgbf1HGitM65aUmc2y1CxcXzGD/a2X5CKM=
 			</data>
 		</dict>
+		<key>Lobster-Regular.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9y8Iar19JWWEULiWYQ+5sQUEPvA=
+			</data>
+			<key>hash2</key>
+			<data>
+			1laOaX/VDO3AvgTYquQSf+la3WB+e/+VTKiGBL6AwgU=
+			</data>
+		</dict>
 		<key>MaterialCommunityIcons.ttf</key>
 		<dict>
 			<key>hash</key>
@@ -383,11 +398,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			crlKbplzNp+Y3h8fH56TInURUK0=
+			tFGdVWG+7mTfwc+x2hEUBDuDfvI=
 			</data>
 			<key>hash2</key>
 			<data>
-			mz/Xc7oeU/r6uSewbwXj9E5mvobLAjhJ6U0nl+mQ734=
+			lGJwB2FkBHJ2oxIlF/OlWNgNsHSppnyBY6Z4/zOfICk=
 			</data>
 		</dict>
 		<key>SimpleLineIcons.ttf</key>
