@@ -10,4 +10,43 @@ dependencies: \
   /Users/ryanyogan/personal/instagram-client/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
   /Users/ryanyogan/personal/instagram-client/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
   /Users/ryanyogan/personal/instagram-client/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/ryanyogan/personal/instagram-client/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h
+  /Users/ryanyogan/personal/instagram-client/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Modules/module.modulemap \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Modules/module.modulemap \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFWebViewAppLinkResolver.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFURL.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFMeasurementEvent.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFAppLinkTarget.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFAppLinkReturnToRefererView.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFAppLinkReturnToRefererController.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFAppLinkResolving.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFAppLinkNavigation.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFAppLink.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFTaskCompletionSource.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFTask+Exceptions.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFTask.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFExecutor.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFCancellationTokenSource.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFCancellationTokenRegistration.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/BFCancellationToken.h \
+  /Users/ryanyogan/personal/instagram-client/ios/Bolts.framework/Headers/Bolts.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKProfilePictureView.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKProfile.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKMutableCopying.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKGraphErrorRecoveryProcessor.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKAppLinkUtility.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKAppLinkResolver.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKUtility.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKTestUsersManager.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKSettings.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKGraphRequestDataAttachment.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKGraphRequest.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKConstants.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKButton.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKApplicationDelegate.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKAppEvents.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKMacros.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKGraphRequestConnection.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKCopying.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKAccessToken.h \
+  /Users/ryanyogan/personal/instagram-client/ios/FBSDKCoreKit.framework/Headers/FBSDKCoreKit.h
