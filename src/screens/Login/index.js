@@ -1,10 +1,24 @@
-import React from 'react';
-import { View, Text, StyleSheet, StatusBar, TextInput } from 'react-native';
+import React, { Component } from 'react';
+import {
+  ActivityIndicator,
+  AsyncStorage,
+  View,
+  Text,
+  StyleSheet,
+  StatusBar,
+  TextInput,
+} from 'react-native';
 import { iOSColors, human, systemWeights } from 'react-native-typography';
 import LinearGradient from 'react-native-linear-gradient';
 import Touchable from '@appandflow/touchable';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { LoginManager, AccessToken } from 'react-native-fbsdk';
+import gql from 'graphql-tag';
+import { graphql } from 'react-apollo';
+
 import { fonts } from '../../utils/themes';
+import { authToken } from '../../utils/constants';
+import { startMainApp } from '../../Nav';
 
 const GRADIENT_COLORS = ['#74398D', '#56499E'];
 
@@ -126,60 +140,125 @@ const styles = StyleSheet.create({
   },
 });
 
-const LoginScreen = () => (
-  <View style={styles.root}>
-    <StatusBar barStyle="light-content" />
-    <LinearGradient
-      start={{ x: 0.0, y: 0.0 }}
-      end={{ x: 1.0, y: 1.0 }}
-      colors={GRADIENT_COLORS}
-      style={styles.header}
-    >
-      <Text style={styles.headerText}>Doggy Duty</Text>
-    </LinearGradient>
-    <View style={styles.content}>
-      <View style={[styles.section, styles.sectionTop]}>
-        <View style={styles.inputWrapper}>
-          <TextInput style={styles.input} placeholder="Email" />
-        </View>
-        <View style={styles.inputWrapper}>
-          <TextInput style={styles.input} placeholder="Password" />
-        </View>
-        <Touchable style={styles.loginButton} feedback="opacity">
-          <Text style={styles.loginButtonText}>Login</Text>
-        </Touchable>
-        <View style={styles.forgotWrapper}>
-          <Text style={styles.calloutText}>Forgot your login details? </Text>
-          <Touchable feedback="opacity">
-            <Text style={styles.forgotButtonText}>Get help signing in.</Text>
-          </Touchable>
-        </View>
-      </View>
-      <View style={styles.orWrapper}>
-        <View style={styles.orDivider} />
-        <View style={styles.orTextWrapper}>
-          <Text style={styles.orText}>OR</Text>
-        </View>
-        <View style={styles.orDivider} />
-      </View>
-      <View style={[styles.section, styles.sectionBottom]}>
-        <Touchable style={styles.fbLoginButton} feedback="opacity">
-          <MaterialCommunityIcons
-            size={30}
-            name="facebook-box"
-            color="#318DEE"
-          />
-          <Text style={styles.fbLoginButtonText}>Continue with Facebook</Text>
-        </Touchable>
-      </View>
-      <View style={styles.noAccountWrapper}>
-        <Text style={styles.calloutText}>Don't have an account? </Text>
-        <Touchable feedback="opacity">
-          <Text style={styles.forgotButtonText}>Sign up.</Text>
-        </Touchable>
-      </View>
-    </View>
-  </View>
-);
+class LoginScreen extends Component {
+  state = {
+    loading: false,
+  };
 
-export default LoginScreen;
+  onLoginPress = async () => {
+    this.setState({ loading: true });
+    const res = await LoginManager.logInWithReadPermissions([
+      'public_profile',
+      'email',
+    ]);
+
+    if (res.grantedPermissions && !res.isCancelled) {
+      const data = await AccessToken.getCurrentAccessToken();
+
+      if (data) {
+        const serverResponse = await this.props.loginMutation({
+          variables: {
+            provider: 'FACEBOOK',
+            token: data.accessToken,
+          },
+        });
+
+        const { token } = serverResponse.data.login;
+
+        try {
+          await AsyncStorage.setItem(authToken, token);
+          startMainApp();
+        } catch (error) {
+          throw error;
+        } finally {
+          this.setState({ loading: false });
+        }
+      }
+    }
+  };
+
+  render() {
+    if (this.state.loading) {
+      return (
+        <View style={styles.root}>
+          <ActivityIndicator size="large" color="#318DEE" />
+        </View>
+      );
+    }
+    return (
+      <View style={styles.root}>
+        <StatusBar barStyle="light-content" />
+        <LinearGradient
+          start={{ x: 0.0, y: 0.0 }}
+          end={{ x: 1.0, y: 1.0 }}
+          colors={GRADIENT_COLORS}
+          style={styles.header}
+        >
+          <Text style={styles.headerText}>Doggy Duty</Text>
+        </LinearGradient>
+        <View style={styles.content}>
+          <View style={[styles.section, styles.sectionTop]}>
+            <View style={styles.inputWrapper}>
+              <TextInput style={styles.input} placeholder="Email" />
+            </View>
+            <View style={styles.inputWrapper}>
+              <TextInput style={styles.input} placeholder="Password" />
+            </View>
+            <Touchable style={styles.loginButton} feedback="opacity">
+              <Text style={styles.loginButtonText}>Login</Text>
+            </Touchable>
+            <View style={styles.forgotWrapper}>
+              <Text style={styles.calloutText}>
+                Forgot your login details?{' '}
+              </Text>
+              <Touchable feedback="opacity">
+                <Text style={styles.forgotButtonText}>
+                  Get help signing in.
+                </Text>
+              </Touchable>
+            </View>
+          </View>
+          <View style={styles.orWrapper}>
+            <View style={styles.orDivider} />
+            <View style={styles.orTextWrapper}>
+              <Text style={styles.orText}>OR</Text>
+            </View>
+            <View style={styles.orDivider} />
+          </View>
+          <View style={[styles.section, styles.sectionBottom]}>
+            <Touchable
+              onPress={this.onLoginPress}
+              style={styles.fbLoginButton}
+              feedback="opacity"
+            >
+              <MaterialCommunityIcons
+                size={30}
+                name="facebook-box"
+                color="#318DEE"
+              />
+              <Text style={styles.fbLoginButtonText}>
+                Continue with Facebook
+              </Text>
+            </Touchable>
+          </View>
+          <View style={styles.noAccountWrapper}>
+            <Text style={styles.calloutText}>Don't have an account? </Text>
+            <Touchable feedback="opacity">
+              <Text style={styles.forgotButtonText}>Sign up.</Text>
+            </Touchable>
+          </View>
+        </View>
+      </View>
+    );
+  }
+}
+
+const loginMutation = gql`
+  mutation loginMutation($provider: Provider, $token: String!) {
+    login(provider: $provider, token: $token) {
+      token
+    }
+  }
+`;
+
+export default graphql(loginMutation, { name: 'loginMutation' })(LoginScreen);
