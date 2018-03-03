@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   actionsSpacer: {
-    flex: 1.6,
+    flex: 1.4,
   },
   bookmarkWrapper: {
     flex: 0.3,
@@ -33,16 +33,25 @@ const styles = StyleSheet.create({
 });
 
 class ActionButtons extends Component {
+  getLikedIcons = () => {
+    if (this.props.viewerLiked) {
+      return <Ionicon name="ios-heart" size={30} color="red" />;
+    }
+
+    return <Ionicon name="ios-heart-outline" size={30} />;
+  };
+
   render() {
     return (
       <View style={styles.root}>
         <View style={styles.actionsWrapper}>
           <Touchable
+            onPress={this.props.onLikedPress}
             hitSlop={makeHitSlop(10)}
             feedback="opacity"
             style={styles.actionButton}
           >
-            <Ionicon name="ios-heart-outline" size={30} />
+            {this.getLikedIcons()}
           </Touchable>
           <Touchable
             hitSlop={makeHitSlop(10)}
